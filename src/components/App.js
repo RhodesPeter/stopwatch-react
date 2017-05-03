@@ -6,19 +6,30 @@ class App extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      timeNow: function(){
-        console.log(parseInt(new Date().getMilliseconds() / 10, 10))
-        // return new Date().getSeconds() / 1000;
-      }
+      started: false,
+      timePassed: 0
     }
   }
 
-  startTime(){
-    const intervalID = setInterval(this.state.timeNow, 10);
+  timeNow = () => {
+    let seconds = this.state.timePassed + 1;
+    this.setState({ timePassed: seconds });
+    console.log(this.state.timePassed)
   }
 
-  stopTime(){
-    window.clearInterval(tom);
+  resetTime = () => {
+    this.setState({ timePassed: 0 });
+  }
+
+  startTime = () => {
+    if(this.state.started === true){ return; }
+    this.interval = setInterval(this.timeNow, 10);
+    this.setState({ started: true });
+  }
+
+  stopTime = () => {
+    window.clearInterval(this.interval);
+    this.setState({ started: false });
   }
 
   render() {
@@ -28,7 +39,7 @@ class App extends Component {
           <div className="stopwatch__screen">00:00:00:00</div>
           <div className="stopwatch__button" onClick={ this.startTime.bind(this) }>start</div>
           <div className="stopwatch__button" onClick={ this.stopTime.bind(this) }>stop</div>
-          <div className="stopwatch__button">reset</div>
+          <div className="stopwatch__button" onClick={ this.resetTime.bind(this) }>reset</div>
         </div>
       </div>
     );
