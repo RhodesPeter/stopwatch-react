@@ -1,9 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './index.css';
+import App from './components/App';
+import Info from './components/Info';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+const Main = () => (
+  <main>
+    <Switch>
+      <Route exact path='/' component={ App }/>
+      <Route path='/info' component={ Info }/>
+    </Switch>
+  </main>
+)
+
+ReactDOM.render((
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+), document.getElementById('root'))
