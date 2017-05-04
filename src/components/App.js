@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import '../App.css';
-import Stopwatch from './Stopwatch.js';
 import Info from './Info.js';
 import Home from './Home.js';
+import Nav from './Nav.js';
 
 import { Switch, Route } from 'react-router-dom'
 
@@ -10,7 +10,8 @@ import { Switch, Route } from 'react-router-dom'
 class App extends Component {
 
   Main = () => (
-    <main>
+    <main className="main">
+      <Nav />
       <Switch>
         <Route exact path='/' component={ Home }/>
         <Route path='/info' component={ Info }/>
@@ -19,9 +20,7 @@ class App extends Component {
   )
 
   render() {
-    return (
-      <this.Main />
-    );
+    return <this.Main />;
   }
 }
 
