@@ -1,24 +1,76 @@
-.app {
+.main,
+.app,
+.info {
+  max-width: 1200px;
+  height: 99vh;
+  margin: 0 auto;
   text-align: center;
   display: -webkit-flex;
+  display: flex;
   -webkit-align-items: center;
-  flex-direction: row;
+  align-items: center;
+  -webkit-justify-content: center;
   justify-content: center;
-  flex-wrap: nowrap;
-  height: 99vh;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-content: center;
+  align-content: center;
+}
+
+.nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: lightblue;
+  font-size: 1.2rem;
+}
+
+.nav__info,
+.nav__title {
+  float: left;
+  cursor: pointer;
+}
+
+.nav__info {
+  padding: 10px 0;
+}
+
+.nav__spacer {
+  float: left;
+  padding: 10px 15px;
+}
+
+.nav__title {
+  padding: 10px 0 10px 15px;
+}
+
+.nav__button {
+  float: right;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.nav__plus {
+  position:relative;
+  top:-1.2px;
 }
 
 .stopwatch {
   width: 17rem;
   height: 6.5rem;
+  margin: 15px;
   background-color: #C02E1D;
   border-radius: 4px;
   text-align: center;
   display: -webkit-flex;
   -webkit-align-items: center;
-  flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.buttonContainer {
+  width: 100%;
 }
 
 .stopwatch__screen {
@@ -33,7 +85,6 @@
 .stopwatch__button {
   margin: 0.3rem 0.3rem 0.6rem 0.3rem;
   padding: 0.4rem 0.6rem;
-  /*border: 2px solid black;*/
   background-color: white;
   border-radius: 2px;
 }
