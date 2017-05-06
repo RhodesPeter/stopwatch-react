@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Stopwatch from './Stopwatch.js';
+import Nav from './Nav.js';
 
 class Home extends Component {
 
@@ -21,12 +22,10 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="app">
-        <div className="buttonContainer">
-          <button onClick={ this.createNewStopwatch }>+</button>
+        <div className="app">
+          <Nav refs="home" onClick={ this.createNewStopwatch.bind(this) }/>
+          {  this.state.watches }
         </div>
-        {  this.state.watches }
-      </div>
     );
   }
 }

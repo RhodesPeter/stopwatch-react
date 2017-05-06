@@ -1,5 +1,6 @@
 .main,
-.app {
+.app,
+.info {
   max-width: 1200px;
   height: 99vh;
   margin: 0 auto;
