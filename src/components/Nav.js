@@ -8,7 +8,10 @@ class Nav extends Component {
     if (this.props.refs === 'home'){
       navVersion = <div className="nav__button" onClick={ this.props.onClick }>
       Add Stopwatch <span className="nav__plus">+</span></div>
-    };
+    } else {
+      navVersion = <Link to='/'><div className="nav__button" onClick={ this.props.onClick }>
+      Add Stopwatch <span className="nav__plus">+</span></div></Link>
+    }
 
     return (
       <div className="nav">

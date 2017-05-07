@@ -6,13 +6,9 @@ body {
 .app,
 .info {
   margin-top: 65px;
-  /*height: 100vh;*/
-  /*margin: 10 auto;*/
   text-align: center;
   display: -webkit-flex;
   display: flex;
-  /*-webkit-align-items: center;
-  align-items: center;*/
   -webkit-justify-content: center;
   justify-content: center;
   -webkit-flex-flow: row wrap;
@@ -54,26 +50,27 @@ a:link {
   display: inline-block;
   padding: 10px 15px;
   color: #C02E1D;
+  display: none;
 }
 
 .nav__spacer-two {
   display: inline-block;
-  padding: 10px 15px;
+  padding: 0 15px;
   color: #C02E1D;
 }
 
 .nav__title {
-  padding: 10px 0 10px 15px;
+  padding: 10px 15px 0 15px;
 }
 
 .nav__button {
   display: inline-block;
-  padding: 10px 15px 10px 0;
   cursor: pointer;
 }
 
 .nav__plus {
   color: #C02E1D;
+  display: none;
 }
 
 .stopwatch {
@@ -173,8 +170,11 @@ a:link {
 
   .nav__spacer {
     float: left;
-    padding: 10px 15px;
-    color: #C02E1D;
+    display: inline-block;
+  }
+
+  .nav__plus {
+    display: inline-block;
   }
 
   .nav__button {

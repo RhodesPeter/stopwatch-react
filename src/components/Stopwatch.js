@@ -52,6 +52,10 @@ class Stopwatch extends Component {
     this.setState({ started: false });
   }
 
+  componentWillUnmount = () => {
+    window.clearInterval(this.interval);
+  }
+
   render(){
     return (
       <div className="stopwatch">
