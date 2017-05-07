@@ -2,8 +2,9 @@
 .app,
 .info {
   max-width: 1200px;
-  height: 99vh;
+  height: 100vh;
   margin: 0 auto;
+  background-color: #EBC844;
   text-align: center;
   display: -webkit-flex;
   display: flex;
@@ -17,11 +18,17 @@
   align-content: center;
 }
 
+a:visited,
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
 .nav {
   width: 100%;
   position: absolute;
   top: 0;
-  background-color: lightblue;
+  background-color: #ECAA38;
   font-size: 1.2rem;
 }
 
@@ -38,6 +45,7 @@
 .nav__spacer {
   float: left;
   padding: 10px 15px;
+  color: #C02E1D;
 }
 
 .nav__title {
@@ -53,13 +61,17 @@
 .nav__plus {
   position:relative;
   top:-1.2px;
+  color: #C02E1D;
 }
 
 .stopwatch {
-  width: 17rem;
+  width: 16rem;
   height: 6.5rem;
   margin: 15px;
   background-color: #C02E1D;
+  letter-spacing: 0.06rem;
+  font-size: 0.9rem;
+  font-family: arial;
   border-radius: 4px;
   text-align: center;
   display: -webkit-flex;
@@ -67,6 +79,10 @@
   justify-content: center;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
+}
+
+.stopwatch__colon {
+  color: #C02E1D;
 }
 
 .buttonContainer {
@@ -87,4 +103,5 @@
   padding: 0.4rem 0.6rem;
   background-color: white;
   border-radius: 2px;
+  cursor: pointer;
 }
