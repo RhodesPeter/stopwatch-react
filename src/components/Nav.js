@@ -15,6 +15,7 @@ class Nav extends Component {
         <div className="nav__title"><Link to='/'>Stopwatch</Link></div>
         <div className="nav__spacer">&#183;</div>
         <div className="nav__info"><Link to='/info'>Info</Link></div>
+        <div className="nav__spacer-two">&#183;</div>
         { navVersion }
       </div>
     );

@@ -1,21 +1,28 @@
+body {
+  background-color: #EBC844;
+}
+
 .main,
 .app,
 .info {
-  max-width: 1200px;
-  height: 100vh;
-  margin: 0 auto;
-  background-color: #EBC844;
+  margin-top: 65px;
+  /*height: 100vh;*/
+  /*margin: 10 auto;*/
   text-align: center;
   display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
-  align-items: center;
+  /*-webkit-align-items: center;
+  align-items: center;*/
   -webkit-justify-content: center;
   justify-content: center;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
   -webkit-align-content: center;
   align-content: center;
+}
+
+.app {
+  max-width: 1100px;
 }
 
 a:visited,
@@ -32,18 +39,25 @@ a:link {
   font-size: 1.2rem;
 }
 
-.nav__info,
 .nav__title {
-  float: left;
+  font-size: 2rem;
   cursor: pointer;
 }
 
 .nav__info {
   padding: 10px 0;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .nav__spacer {
-  float: left;
+  display: inline-block;
+  padding: 10px 15px;
+  color: #C02E1D;
+}
+
+.nav__spacer-two {
+  display: inline-block;
   padding: 10px 15px;
   color: #C02E1D;
 }
@@ -53,18 +67,17 @@ a:link {
 }
 
 .nav__button {
-  float: right;
-  padding: 10px 20px;
+  display: inline-block;
+  padding: 10px 15px 10px 0;
   cursor: pointer;
 }
 
 .nav__plus {
-  position:relative;
-  top:-1.2px;
   color: #C02E1D;
 }
 
 .stopwatch {
+  box-shadow: 0 3px 5px #ECAA38;
   width: 16rem;
   height: 6.5rem;
   margin: 15px;
@@ -81,8 +94,38 @@ a:link {
   flex-flow: row wrap;
 }
 
+.stopwatch:nth-of-type(3) {
+  background: #1DADCE;
+}
+
+.stopwatch:nth-of-type(4) {
+  background: #1395BA;
+}
+
+.stopwatch:nth-of-type(5) {
+  background: #1A87A0;
+}
+
+.stopwatch:nth-of-type(6) {
+  background: #117899;
+}
+
+.stopwatch:nth-of-type(7) {
+  background: #106E84;
+}
+
+.stopwatch:nth-of-type(8) {
+  background: #0F5B78;
+}
+
+.stopwatch:nth-of-type(9) {
+  background: #0D3C55;
+}
+
 .stopwatch__colon {
   color: #C02E1D;
+  position: relative;
+  top: -0.1rem;
 }
 
 .buttonContainer {
@@ -92,7 +135,7 @@ a:link {
 .stopwatch__screen {
   width: 80%;
   margin: 0.7rem 0 0 0;
-  padding: 0.2rem;
+  padding: 0.3rem 0.1rem 0.1rem 0.1rem;
   background-color: white;
   border-radius: 2px;
   font-size: 1.5rem;
@@ -104,4 +147,43 @@ a:link {
   background-color: white;
   border-radius: 2px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 520px) {
+  .nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #ECAA38;
+    font-size: 1.2rem;
+  }
+
+  .nav__info,
+  .nav__title {
+    float: left;
+    cursor: pointer;
+    padding: 10px 0 10px 20px;
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+
+  .nav__info {
+    padding: 10px 0;
+  }
+
+  .nav__spacer {
+    float: left;
+    padding: 10px 15px;
+    color: #C02E1D;
+  }
+
+  .nav__button {
+    float: right;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .nav__spacer-two {
+    display: none;
+  }
 }
