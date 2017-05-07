@@ -7,7 +7,7 @@ class Info extends Component {
     return (
       <div className="info">
         <Nav refs="info"/>
-        <div>
+        <div className="info__container">
           <h3>Stopwatch App built by <a className="underline"
             href="http://rhodespeter.co.uk/">Peter Rhodes</a> with <a className="underline"
               href="https://facebook.github.io/react/">React</a>.

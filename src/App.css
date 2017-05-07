@@ -61,6 +61,7 @@ a:link {
 
 .nav__title {
   padding: 10px 15px 0 15px;
+  font-size: 2.3rem;
 }
 
 .nav__button {
@@ -75,12 +76,12 @@ a:link {
 
 .stopwatch {
   box-shadow: 0 3px 5px #ECAA38;
-  width: 16rem;
-  height: 6.5rem;
+  width: 17rem;;
+  height: 6.1rem;
   margin: 15px;
   background-color: #C02E1D;
   letter-spacing: 0.06rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-family: arial;
   border-radius: 4px;
   text-align: center;
@@ -135,7 +136,7 @@ a:link {
   padding: 0.3rem 0.1rem 0.1rem 0.1rem;
   background-color: white;
   border-radius: 2px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .stopwatch__button {
@@ -144,6 +145,11 @@ a:link {
   background-color: white;
   border-radius: 2px;
   cursor: pointer;
+}
+
+.info__container {
+  font-size: 1rem;
+  padding: 2rem;
 }
 
 .underline {
@@ -189,5 +195,33 @@ a:link {
 
   .nav__spacer-two {
     display: none;
+  }
+
+  .info__container {
+    font-size: 1.3rem;
+    padding: 0 6.5rem;
+  }
+
+  .app {
+    padding: 0 6.5rem;
+  }
+
+  .stopwatch {
+    width: 14.15rem;
+  }
+}
+
+@media screen and (min-width: 520px) and (max-width: 800px) {
+  body {
+    border: 2px solid blue;
+  }
+
+  .main,
+  .app {
+    margin-top: 2.2rem;
+  }
+
+  .app {
+    padding: 0 3rem;
   }
 }
