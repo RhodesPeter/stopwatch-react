@@ -52,13 +52,20 @@ class Stopwatch extends Component {
     this.setState({ started: false });
   }
 
+  componentWillUnmount = () => {
+    window.clearInterval(this.interval);
+  }
+
   render(){
     return (
       <div className="stopwatch">
-        <div className="stopwatch__screen">{this.state.minutes}:{this.state.seconds}:{this.state.milliseconds}</div>
-        <div className="stopwatch__button" onClick={ this.startTime.bind(this) }>start</div>
-        <div className="stopwatch__button" onClick={ this.stopTime.bind(this) }>stop</div>
-        <div className="stopwatch__button" onClick={ this.resetTime.bind(this) }>reset</div>
+        <div className="stopwatch__screen">
+          {this.state.minutes}<span className="stopwatch__colon">:</span>
+          {this.state.seconds}<span className="stopwatch__colon">:</span>
+          {this.state.milliseconds}</div>
+        <div className="stopwatch__button" onClick={ this.startTime.bind(this) }>Start</div>
+        <div className="stopwatch__button" onClick={ this.stopTime.bind(this) }>Stop</div>
+        <div className="stopwatch__button" onClick={ this.resetTime.bind(this) }>Reset</div>
       </div>
     )
   };

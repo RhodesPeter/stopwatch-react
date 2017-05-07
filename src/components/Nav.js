@@ -8,13 +8,17 @@ class Nav extends Component {
     if (this.props.refs === 'home'){
       navVersion = <div className="nav__button" onClick={ this.props.onClick }>
       Add Stopwatch <span className="nav__plus">+</span></div>
-    };
+    } else {
+      navVersion = <Link to='/'><div className="nav__button" onClick={ this.props.onClick }>
+      Add Stopwatch <span className="nav__plus">+</span></div></Link>
+    }
 
     return (
       <div className="nav">
         <div className="nav__title"><Link to='/'>Stopwatch</Link></div>
         <div className="nav__spacer">&#183;</div>
         <div className="nav__info"><Link to='/info'>Info</Link></div>
+        <div className="nav__spacer-two">&#183;</div>
         { navVersion }
       </div>
     );

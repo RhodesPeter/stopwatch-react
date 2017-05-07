@@ -14,7 +14,7 @@ class Home extends Component {
   }
 
   createNewStopwatch = () => {
-    if(this.state.watches.length > 11){ return }
+    if(this.state.watches.length > 7){ return }
     this.setState({ count: this.state.count + 1 });
     this.state.watches.push( <Stopwatch key={ this.state.count }/> );
     return this.state.watches;

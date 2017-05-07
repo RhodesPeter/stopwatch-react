@@ -1,14 +1,14 @@
+body {
+  background-color: #EBC844;
+}
+
 .main,
 .app,
 .info {
-  max-width: 1200px;
-  height: 99vh;
-  margin: 0 auto;
+  margin-top: 65px;
   text-align: center;
   display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
-  align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
   -webkit-flex-flow: row wrap;
@@ -17,49 +17,72 @@
   align-content: center;
 }
 
+.app {
+  max-width: 1100px;
+}
+
+a:visited,
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
 .nav {
   width: 100%;
   position: absolute;
   top: 0;
-  background-color: lightblue;
+  background-color: #ECAA38;
   font-size: 1.2rem;
 }
 
-.nav__info,
 .nav__title {
-  float: left;
+  font-size: 2rem;
   cursor: pointer;
 }
 
 .nav__info {
   padding: 10px 0;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .nav__spacer {
-  float: left;
+  display: inline-block;
   padding: 10px 15px;
+  color: #C02E1D;
+  display: none;
+}
+
+.nav__spacer-two {
+  display: inline-block;
+  padding: 0 15px;
+  color: #C02E1D;
 }
 
 .nav__title {
-  padding: 10px 0 10px 15px;
+  padding: 10px 15px 0 15px;
+  font-size: 2.3rem;
 }
 
 .nav__button {
-  float: right;
-  padding: 10px 20px;
+  display: inline-block;
   cursor: pointer;
 }
 
 .nav__plus {
-  position:relative;
-  top:-1.2px;
+  color: #C02E1D;
+  display: none;
 }
 
 .stopwatch {
-  width: 17rem;
-  height: 6.5rem;
+  box-shadow: 0 3px 5px #ECAA38;
+  width: 17rem;;
+  height: 6.1rem;
   margin: 15px;
   background-color: #C02E1D;
+  letter-spacing: 0.06rem;
+  font-size: 0.85rem;
+  font-family: arial;
   border-radius: 4px;
   text-align: center;
   display: -webkit-flex;
@@ -69,6 +92,40 @@
   flex-flow: row wrap;
 }
 
+.stopwatch:nth-of-type(3) {
+  background: #1DADCE;
+}
+
+.stopwatch:nth-of-type(4) {
+  background: #1395BA;
+}
+
+.stopwatch:nth-of-type(5) {
+  background: #1A87A0;
+}
+
+.stopwatch:nth-of-type(6) {
+  background: #117899;
+}
+
+.stopwatch:nth-of-type(7) {
+  background: #106E84;
+}
+
+.stopwatch:nth-of-type(8) {
+  background: #0F5B78;
+}
+
+.stopwatch:nth-of-type(9) {
+  background: #0D3C55;
+}
+
+.stopwatch__colon {
+  color: #C02E1D;
+  position: relative;
+  top: -0.1rem;
+}
+
 .buttonContainer {
   width: 100%;
 }
@@ -76,10 +133,10 @@
 .stopwatch__screen {
   width: 80%;
   margin: 0.7rem 0 0 0;
-  padding: 0.2rem;
+  padding: 0.3rem 0.1rem 0.1rem 0.1rem;
   background-color: white;
   border-radius: 2px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .stopwatch__button {
@@ -87,4 +144,84 @@
   padding: 0.4rem 0.6rem;
   background-color: white;
   border-radius: 2px;
+  cursor: pointer;
+}
+
+.info__container {
+  font-size: 1rem;
+  padding: 2rem;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+@media screen and (min-width: 520px) {
+  .nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #ECAA38;
+    font-size: 1.2rem;
+  }
+
+  .nav__info,
+  .nav__title {
+    float: left;
+    cursor: pointer;
+    padding: 10px 0 10px 20px;
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+
+  .nav__info {
+    padding: 10px 0;
+  }
+
+  .nav__spacer {
+    float: left;
+    display: inline-block;
+  }
+
+  .nav__plus {
+    display: inline-block;
+  }
+
+  .nav__button {
+    float: right;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .nav__spacer-two {
+    display: none;
+  }
+
+  .info__container {
+    font-size: 1.3rem;
+    padding: 0 6.5rem;
+  }
+
+  .app {
+    padding: 0 6.5rem;
+  }
+
+  .stopwatch {
+    width: 14.15rem;
+  }
+}
+
+@media screen and (min-width: 520px) and (max-width: 800px) {
+  body {
+    border: 2px solid blue;
+  }
+
+  .main,
+  .app {
+    margin-top: 2.2rem;
+  }
+
+  .app {
+    padding: 0 3rem;
+  }
 }
