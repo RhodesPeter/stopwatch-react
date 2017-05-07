@@ -5,7 +5,7 @@ body {
 .main,
 .app,
 .info {
-  margin-top: 65px;
+  margin-top: 70px;
   text-align: center;
   display: -webkit-flex;
   display: flex;
@@ -35,11 +35,6 @@ a:link {
   font-size: 1.2rem;
 }
 
-.nav__title {
-  font-size: 2rem;
-  cursor: pointer;
-}
-
 .nav__info {
   padding: 10px 0;
   display: inline-block;
@@ -61,7 +56,10 @@ a:link {
 
 .nav__title {
   padding: 10px 15px 0 15px;
-  font-size: 2.3rem;
+  font-size: 3.1rem;
+  line-height: 4.3rem;
+  letter-spacing: 0.15rem;
+  font-weight: bold;
 }
 
 .nav__button {
@@ -71,7 +69,8 @@ a:link {
 
 .nav__plus {
   color: #C02E1D;
-  display: none;
+  position: relative;
+  top: 1px;
 }
 
 .stopwatch {
@@ -157,49 +156,18 @@ a:link {
 }
 
 @media screen and (min-width: 520px) {
-  .nav {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    background-color: #ECAA38;
-    font-size: 1.2rem;
+  .main,
+  .app {
+    margin-top: 85px;
   }
 
-  .nav__info,
   .nav__title {
-    float: left;
-    cursor: pointer;
-    padding: 10px 0 10px 20px;
-    display: inline-block;
-    font-size: 1.2rem;
-  }
-
-  .nav__info {
-    padding: 10px 0;
-  }
-
-  .nav__spacer {
-    float: left;
-    display: inline-block;
-  }
-
-  .nav__plus {
-    display: inline-block;
-  }
-
-  .nav__button {
-    float: right;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-
-  .nav__spacer-two {
-    display: none;
+    font-size: 3.8rem;
   }
 
   .info__container {
     font-size: 1.3rem;
-    padding: 0 6.5rem;
+    padding: 0 6rem;
   }
 
   .app {
@@ -212,11 +180,6 @@ a:link {
 }
 
 @media screen and (min-width: 520px) and (max-width: 800px) {
-  .main,
-  .app {
-    margin-top: 2.2rem;
-  }
-
   .app {
     padding: 0 3rem;
   }
